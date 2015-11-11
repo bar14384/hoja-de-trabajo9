@@ -1,0 +1,37 @@
+/**
+ * Universidad del Valle de Guatemala
+ * hoja de trabajo 9
+ * Michelle Bartra 14384
+ * Manolo Benegas 14180
+ */
+public class SplayTreeSet implements WordSet{
+        
+    private SplayTree base; // SplayTree
+        
+    /**
+     * post: se instancia el splay tree
+     */
+    public SplayTreeSet(){
+        base = new SplayTree();
+    }
+
+    /**
+     * post: obtiene la palabra que busco en la estructura
+     * @param word
+     * @return 
+     */
+    @Override
+    public Word get(Word word){
+        Word temp = (Word)base.find(word);
+        return temp;
+    }
+    /**
+     * post: añade una nueva palabra a la estructura
+     * @param wordObject 
+     */
+    @Override
+    public void add(Word wordObject){
+        base.insert(wordObject);
+    }
+    
+}
